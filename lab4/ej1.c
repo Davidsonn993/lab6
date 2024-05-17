@@ -61,11 +61,12 @@ int main() {                                              //Funcíon primcipal
     scanf("%d", &valor);
     
                                                              // Realizar búsqueda del valor
-    int posicion = buscadorValor(arr, n, valor);             //ingresado por el usuario en el arreglo
+    int posicion = buscadorValor(arr, n, valor);             //ingresado por el usuario en el arreglo.....|:wq
+
     int indice = buscarElemento(arr, n, valor);
     int indice1 = buscarElementoRecursivo(arr, 0, n - 1, valor);
  
-                                                              // Mostrar resultado
+                                                              // Mostrar resultado.... 
     if (posicion != - 1|| indice != -1 || indice1 != -1){
         printf("El valor %d se encuentra en la posición:\n", valor);
         printf(" %d del arreglo(Búsqueda Lineal).\n", posicion);
