@@ -11,8 +11,7 @@ OBJS = $(SRCS:.c=.o)
 CC = gcc
 
 # Flags de compilación
-CFLAGS = -Wall -Wextra -g
-
+CFLAGS = -Wall -Wextra -std=c11 -g
 # Regla por defecto: compilar todo
 all: $(TARGET)
 
@@ -31,6 +30,12 @@ double_list.o: double_stack.c double_stack.h
 # Regla para limpiar los archivos compilados
 clean:
 	rm -f $(OBJS) $(TARGET)
+
+valgrind: $(TARGET)
+	valgrind --leak-check=full ./$(TARGET)
+
+
+
 
 # Indicar que estas reglas no son archivos
 .PHONY: all clean
